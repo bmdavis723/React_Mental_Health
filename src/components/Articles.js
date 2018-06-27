@@ -12,7 +12,7 @@ export default class Articles extends React.Component {
 }
 
   componentDidMount() {
-    const url = 'https://newsapi.org/v2/everything?q=fitness+exercise+wellness&from=2018-06-26&to=2018-06-26&sortBy=popularity&apiKey=ec7874794e95486fa3b38a9d6ca70a54'
+    const url = 'https://newsapi.org/v2/everything?q=fitness&from=2018-06-26&to=2018-06-26&sortBy=popularity&apiKey=ec7874794e95486fa3b38a9d6ca70a54'
     console.log("I mounted")
     axios.get(url).then(res => {
       let response = this.dataHandler(res);
@@ -31,8 +31,30 @@ export default class Articles extends React.Component {
   render(){
       return (
         <div>
-            {this.state.articles.map((article, i) =>
-              <a key={i} href="{article[2]}">{article[0]}<img src={article[1]} alt="img" />{article[3]}</a>)}
+          <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel">
+            <div className="carousel-inner">
+              { this.state.articles.map((article, i) => {
+                  return (
+                    <div key={i} className={(i === 0) ? "carousel-item active" : "carousel-item" }>
+                      <img className="d-block w-100 h-50" src={article[1]} alt="img" />
+                      <div className="carousel-caption">
+                        <h5><a key={i} href={article[2]}>{article[0]}</a></h5>
+                        <p>{article[3]}</p>
+                      </div>
+                    </div>
+                  )
+                })
+              }
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
         </div>
       )
     }
