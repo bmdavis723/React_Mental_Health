@@ -7,7 +7,8 @@
     "express": "^4.16.3",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-scripts": "1.1.4"
+    "react-scripts": "^1.1.4",
+    "yarn": "^1.7.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -22,10 +23,11 @@
     "url": "git+https://github.com/bmdavis723/React_Mental_Health.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Karla Cortes <kmcortes7@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bmdavis723/React_Mental_Health/issues"
   },
-  "homepage": "https://github.com/bmdavis723/React_Mental_Health#readme"
+  "homepage": "https://github.com/bmdavis723/React_Mental_Health#readme",
+  "devDependencies": {}
 }

@@ -1,0 +1,27 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-size: 100px;
+  font-weight: 200;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.jumbotron {
+  height: 500px;
+  background-color: #FFA500;
+}
+
+input, .ui.dropdown {
+  font-size: 20px;
+}
+
+h2 {
+  font-family: 'Michroma', sans-serif;
+  font-size: 60px;
+  margin-bottom: 35px;
+  color: white;
+}
