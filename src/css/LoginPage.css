@@ -1,0 +1,14 @@
+
+#login {
+    background-image: url("https://evofitness.ch/wp-content/uploads/2018/02/6-exercises-to-do-together_banner.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-weight: 600;
+}
+
+.welcome {
+  color: white;
+}
